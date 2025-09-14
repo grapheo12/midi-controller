@@ -1,5 +1,13 @@
 # midi-controller
 
+I wrote this because I wanted to use plugins from Polychrome/Neural DSP without having to fire up a DAW.
+I want the tones from these plugins but still want to switch between patches easily like a FX unit/pedal,
+**without having to buy a MIDI switcher.**
+This holds up well when the songs need not so frequent tone changes,
+and there is a second of respite between sections to quickly press a number key on the keyboard with my hand.
+This is mostly what I play, so it fits me. :-)
+
+
 Tested on M1 Macbook Pro (2022) with Sequoia 15.6.1.
 
 # Setup
@@ -38,3 +46,8 @@ where `key` is the number pressed between 0-9.
 Due to the common keyboard layout where a 0 is placed after 9, 0 is considered as 10.
 
 So, in bank 0, pressing 1 gives you PC#0, 2 gives you PC#1, ..., 0 gives you PC#9.
+
+# Connecting to a MIDI Sink
+
+Usually plugins/softwares that accept MIDI have the MIDI channel they are feeding from as an audio I/O parameter.
+Change it to use IAC Driver Bus 1 (or whatever you configured in MIDI studio).
